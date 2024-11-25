@@ -1,101 +1,71 @@
 import Image from "next/image";
+import xlogo from "../../public/X_logo.jpg";
+import { FaGoogle } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
+import { footerData } from "@/lib/data";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="flex flex-col h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-inter)]">
+      <div className="flex flex-row">
+        <div className=" w-[55%] flex justify-center items-center ">
+          <Image
+            src={xlogo}
+            height={400}
+            width={400}
+            alt="X-logo"
+            className=""
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="  w-[45%]">
+          <p className="font-bold text-[55px] mb-3">Happening now</p>
+          <p className="font-bold text-[31px]">Join today.</p>
+          <div className="flex flex-col gap-y-2">
+            <div className="rounded-full py-2 px-8 bg-white flex flex-row gap-x-2 items-center justify-center cursor-pointer w-[260px]">
+              <FaGoogle color="#000000 " size={15} />
+              <p className=" text-black text-xs">Sign up with Google</p>
+            </div>
+            <div className="rounded-full py-2 px-8 bg-white flex flex-row gap-x-2 items-center justify-center cursor-pointer  w-[260px]">
+              <FaApple color="#000000 " size={15} />
+              <p className=" text-black text-xs">Sign up with Apple</p>
+            </div>
+          </div>
+          <div className="my-1 flex flex-row gap-x-2 items-center  w-[260px]">
+            <div className="w-[50%] h-[1px] bg-[#2F3336]" />
+            <p>or</p>
+            <div className="w-[50%] h-[1px] bg-[#2F3336]" />
+          </div>
+          <div>
+            <div className="bg-[#1A8CD8] rounded-full py-2 px-8  flex flex-row gap-x-2 items-center justify-center cursor-pointer w-[260px]">
+              <p className="text-white text-xs">Create account</p>
+            </div>
+            <p className="text-[10px] mt-1 w-[260px]">
+              By signing up, you agree to the{" "}
+              <span className="text-[#1A8CD8] cursor-pointer hover:underline">Terms of Service</span> and{" "}
+              <span className="text-[#1A8CD8] cursor-pointer hover:underline">Privacy Policy</span>, including{" "}
+              <span className="text-[#1A8CD8] cursor-pointer hover:underline">Privacy Policy</span>
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <p className="text-sm">Already have an account?</p>
+            <div className="cursor-pointer hover:bg-transparent border-[1px] rounded-full py-2 px-8 mt-4 flex flex-row gap-x-2 items-center justify-center w-[260px]">
+              <p className="text-[#1A8CD8] text-sm">Sign in</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-row gap-x-[10.5px]">
+        {footerData.map((data) => (
+          <p
+            key={data.id}
+            className="text-[10px] hover:underline text-[#71767B] cursor-pointer"
+          >
+            {data.name}
+          </p>
+        ))}
+      </div>
+    </main>
   );
 }
