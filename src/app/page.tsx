@@ -13,7 +13,7 @@ export default function Home() {
   const [isSignInOpen, setIsSignInOpen] = useState(false);
 
   return (
-    <main className="flex flex-col h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-inter)]">
+    <section className="flex flex-col h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-inter)]">
       <div className="flex flex-row">
         <div className=" w-[55%] flex justify-center items-center ">
           <Image
@@ -97,6 +97,6 @@ export default function Home() {
           setIsSignInOpen={setIsSignInOpen}
         />
       )}
-    </main>
+    </section>
   );
 }

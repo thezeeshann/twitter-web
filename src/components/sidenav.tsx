@@ -29,7 +29,7 @@ export default function SideNav() {
         <XSidenavButton name="Profile" icon={CgProfile} />
         <XSidenavButton name="More" icon={CiCircleMore} />
       </div>
-      <button className="cursor-pointer bg-[#1A8CD8] font-medium w-[80%] rounded-full py-2 px-8 mt-4">
+      <button className="cursor-pointer text-base bg-[#1A8CD8] font-medium w-[80%] rounded-full py-2 px-8 mt-4">
         Post
       </button>
       <div className="flex flex-row items-center justify-between mt-7">
